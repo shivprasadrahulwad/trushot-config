@@ -1,7 +1,0 @@
-{
-  "minimumSupportedVersion": "3.0.0",
-  "latestVersion": "1.0.0",
-  "androidUpdateUrl": "market://details?id=com.istylish.app",
-  "iosUpdateUrl": "https://apps.apple.com/app/istylish/id6440000000",
-  "releaseNotes": "Corrupted configuration with min > latest."
-}
