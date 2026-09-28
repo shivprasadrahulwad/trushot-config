@@ -1,7 +1,7 @@
 {
-  "minimumSupportedVersion": "1.0.0",
-  "latestVersion": "1.1.1",
+  "minimumSupportedVersion": "2.0.0",
+  "latestVersion": "2.0.0",
   "androidUpdateUrl": "market://details?id=com.istylish.app",
   "iosUpdateUrl": "https://apps.apple.com/app/istylish/id6440000000",
-  "releaseNotes": "Enhanced pose isolation and new editorial catalog styles v1.1.1."
+  "releaseNotes": "Major architectural release v2.0.0. Update required to continue using iStylish."
 }
