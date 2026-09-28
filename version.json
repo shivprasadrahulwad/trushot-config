@@ -1,7 +1,7 @@
 {
   "minimumSupportedVersion": "1.0.0",
-  "latestVersion": "1.1.0",
-  "androidUpdateUrl": "https://play.google.com/store/apps/details?id=com.istylish.app",
+  "latestVersion": "1.1.1",
+  "androidUpdateUrl": "market://details?id=com.istylish.app",
   "iosUpdateUrl": "https://apps.apple.com/app/istylish/id6440000000",
-  "releaseNotes": "Enhanced pose isolation and new editorial catalog styles."
+  "releaseNotes": "Enhanced pose isolation and new editorial catalog styles v1.1.1."
 }
