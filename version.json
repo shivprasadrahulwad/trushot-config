@@ -1,7 +1,7 @@
 {
   "minimumSupportedVersion": "1.0.0",
   "latestVersion": "1.0.0",
-  "androidUpdateUrl": "https://play.google.com/store/apps/details?id=com.istylish.app",
-  "iosUpdateUrl": "https://apps.apple.com/app/istylish/id6440000000",
-  "releaseNotes": "Initial production release of iStylish."
+  "androidUpdateUrl": "https://play.google.com/store/apps/details?id=com.trushot.app",
+  "iosUpdateUrl": "https://apps.apple.com/app/trushot/id6440000000",
+  "releaseNotes": "Initial production release of TruShot."
 }

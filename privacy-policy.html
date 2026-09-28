@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - TruShot Studio</title>
+    <style>
+        :root {
+            --bg-color: #08090C;
+            --surface-color: #12131A;
+            --surface-elevated: #1A1C24;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-primary: #F4F4F6;
+            --text-secondary: #9E9EA8;
+            --text-muted: #6C6C7A;
+            --accent: #6366F1;
+            --accent-glow: rgba(99, 102, 241, 0.15);
+            --success: #10B981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.65;
+            padding: 24px 16px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 36px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .brand-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .brand-badge .dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--success);
+            border-radius: 50%;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            margin-bottom: 8px;
+            color: #FFFFFF;
+        }
+
+        .effective-date {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .callout-box {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin: 24px 0 32px 0;
+        }
+
+        .callout-box h3 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #FFFFFF;
+        }
+
+        .callout-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 32px;
+            margin-bottom: 14px;
+            color: #FFFFFF;
+            letter-spacing: -0.4px;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        ul {
+            margin: 12px 0 20px 24px;
+            color: var(--text-secondary);
+            font-size: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        li strong {
+            color: var(--text-primary);
+        }
+
+        footer {
+            margin-top: 56px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 26px; }
+            h2 { font-size: 18px; }
+            body { padding: 20px 12px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-badge">
+                <span class="dot"></span>
+                <span>TruShot Studio · 100% On-Device</span>
+            </div>
+            <h1>Privacy Policy</h1>
+            <p class="effective-date">Effective Date: September 28, 2026 · Version 1.0</p>
+        </header>
+
+        <div class="callout-box">
+            <h3>Summary of Our Privacy Guarantee</h3>
+            <p>TruShot is built with a strict <strong>privacy-by-design, on-device-first</strong> principle. We do not require accounts, we do not track your activity, and we never collect, transmit, or sell your photos or personal data. Your creations belong entirely to you and stay on your device.</p>
+        </div>
+
+        <section>
+            <h2>1. Information We Do Not Collect</h2>
+            <p>Unlike traditional apps, TruShot functions entirely without servers or remote telemetry:</p>
+            <ul>
+                <li><strong>No Personal Identifiers:</strong> We do not ask for your name, email, phone number, or social profiles.</li>
+                <li><strong>No Account Required:</strong> You can use all core features anonymously and offline.</li>
+                <li><strong>No Photo Uploads:</strong> Photos you take or choose as pose references are never uploaded to any remote server or third-party cloud.</li>
+                <li><strong>No Advertising Identifiers:</strong> We do not integrate ad networks, tracking pixels, or cross-app analytics SDKs.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Device Permissions and How They Are Used</h2>
+            <p>TruShot requests only the permissions strictly required to provide its camera and pose overlay features:</p>
+            <ul>
+                <li><strong>Camera Permission (android.permission.CAMERA):</strong>
+                    Used exclusively to display the real-time camera viewfinder, allow interactive pose overlay alignment, and capture photographs at your explicit direction. Camera frames remain in volatile local memory during preview and are never recorded or transmitted off-device.
+                </li>
+                <li><strong>Photo Library & Storage (READ_MEDIA_IMAGES / WRITE_EXTERNAL_STORAGE):</strong>
+                    Used exclusively when you tap "Select" to load a reference image from your gallery or choose to save your newly captured photos into your device's photo gallery.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Local Storage and Data Persistence</h2>
+            <p>All data generated within TruShot—including custom pose folders, favorite/liked poses, camera preferences, and capture metadata—is stored locally in an isolated on-device sandbox. If you uninstall the app or clear app data, this locally cached metadata is deleted according to standard Android operating system rules.</p>
+        </section>
+
+        <section>
+            <h2>4. Third-Party Services and Analytics</h2>
+            <p>TruShot does not employ third-party analytics services (such as Google Analytics for Firebase, Facebook SDK, or Mixpanel) to monitor user behavior. Fonts and essential assets are bundled locally with the app package to ensure zero network exposure during routine use.</p>
+        </section>
+
+        <section>
+            <h2>5. Children's Privacy</h2>
+            <p>TruShot does not target or knowingly collect information from children under 13 years of age (or applicable age in your jurisdiction). Because the app collects no personal data whatsoever, parents can rest assured no identifying data is harvested from their children.</p>
+        </section>
+
+        <section>
+            <h2>6. Policy Updates</h2>
+            <p>We may periodically update this Privacy Policy to reflect future software enhancements. Any modifications will be posted to this page with an updated "Effective Date".</p>
+        </section>
+
+        <section>
+            <h2>7. Contact Us</h2>
+            <p>If you have any questions, feedback, or concerns regarding this Privacy Policy or TruShot's privacy architecture, please reach out to us at:</p>
+            <p><strong>Email:</strong> <a href="mailto:support@trushot.app" style="color: var(--accent);">support@trushot.app</a></p>
+        </section>
+
+        <footer>
+            <p>© 2026 TruShot Studio. All rights reserved.</p>
+            <p style="margin-top: 8px;">
+                <a href="privacy-policy.html">Privacy Policy</a> ·
+                <a href="terms.html">Terms & Conditions</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
