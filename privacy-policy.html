@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - trushot Studio</title>
+    <title>Privacy Policy - TruShot</title>
     <style>
         :root {
             --bg-color: #08090C;
@@ -162,69 +162,82 @@
         <header>
             <div class="brand-badge">
                 <span class="dot"></span>
-                <span>trushot Studio · 100% On-Device</span>
+                <span>TruShot · On-Device First</span>
             </div>
             <h1>Privacy Policy</h1>
             <p class="effective-date">Effective Date: September 28, 2026 · Version 1.0</p>
         </header>
 
         <div class="callout-box">
-            <h3>Summary of Our Privacy Guarantee</h3>
-            <p>trushot is built with a strict <strong>privacy-by-design, on-device-first</strong> principle. We do not require accounts, we do not track your activity, and we never collect, transmit, or sell your photos or personal data. Your creations belong entirely to you and stay on your device.</p>
+            <h3>Summary of Our Privacy Architecture</h3>
+            <p>TruShot is built with a strict <strong>on-device-first architecture</strong>. We do not require accounts, and we never collect, transmit, or sell your photos or personal creative data. All camera frames, captures, and custom collections remain on your local hardware.</p>
         </div>
 
         <section>
             <h2>1. Information We Do Not Collect</h2>
-            <p>Unlike traditional apps, trushot functions entirely without servers or remote telemetry:</p>
+            <p>Unlike traditional camera and social applications, TruShot functions with an on-device first architecture without remote user accounts:</p>
             <ul>
-                <li><strong>No Personal Identifiers:</strong> We do not ask for your name, email, phone number, or social profiles.</li>
-                <li><strong>No Account Required:</strong> You can use all core features anonymously and offline.</li>
-                <li><strong>No Photo Uploads:</strong> Photos you take or choose as pose references are never uploaded to any remote server or third-party cloud.</li>
-                <li><strong>No Advertising Identifiers:</strong> We do not integrate ad networks, tracking pixels, or cross-app analytics SDKs.</li>
+                <li><strong>No Personal Identifiers:</strong> We do not collect names, email addresses, phone numbers, or account credentials.</li>
+                <li><strong>No Photo Uploads:</strong> Photos you capture or import as pose references remain strictly on your local device hardware.</li>
+                <li><strong>No Advertising Networks:</strong> We do not integrate advertising networks or cross-app ad tracking SDKs. Google Advertising ID (AD_ID) and App Set ID are disabled.</li>
+                <li><strong>Pseudonymous Product Analytics:</strong> TruShot uses Amplitude to collect pseudonymous product telemetry about app usage, such as feature interactions and app version. TruShot does not send your photos, filenames, folder names, names, email addresses, phone numbers, or precise GPS location to Amplitude.</li>
             </ul>
         </section>
 
         <section>
             <h2>2. Device Permissions and How They Are Used</h2>
-            <p>trushot requests only the permissions strictly required to provide its camera and pose overlay features:</p>
+            <p>TruShot requests only the permissions strictly required to provide its camera and pose overlay features:</p>
             <ul>
                 <li><strong>Camera Permission (android.permission.CAMERA):</strong>
-                    Used exclusively to display the real-time camera viewfinder, allow interactive pose overlay alignment, and capture photographs at your explicit direction. Camera frames remain in volatile local memory during preview and are never recorded or transmitted off-device.
+                    Used exclusively to render the live camera viewfinder, allow interactive pose overlay alignment, and capture photographs at your explicit direction. Camera frames remain in volatile local memory during preview and are never recorded or transmitted off-device.
                 </li>
                 <li><strong>Photo Library & Storage (READ_MEDIA_IMAGES / WRITE_EXTERNAL_STORAGE):</strong>
-                    Used exclusively when you tap "Select" to load a reference image from your gallery or choose to save your newly captured photos into your device's photo gallery.
+                    Used exclusively when you tap "Select" to load an overlay photo from your gallery or choose to save captured photos directly to your system photo album.
                 </li>
             </ul>
         </section>
 
         <section>
             <h2>3. Local Storage and Data Persistence</h2>
-            <p>All data generated within trushot—including custom pose folders, favorite/liked poses, camera preferences, and capture metadata—is stored locally in an isolated on-device sandbox. If you uninstall the app or clear app data, this locally cached metadata is deleted according to standard Android operating system rules.</p>
+            <p>All pose collections, liked/favorite markings, custom folder assignments, and camera preferences are stored locally in an isolated on-device sandbox. If you uninstall the app or clear app data, this locally cached metadata is deleted according to standard Android operating system rules.</p>
         </section>
 
         <section>
-            <h2>4. Third-Party Services and Analytics</h2>
-            <p>trushot does not employ third-party analytics services (such as Google Analytics for Firebase, Facebook SDK, or Mixpanel) to monitor user behavior. Fonts and essential assets are bundled locally with the app package to ensure zero network exposure during routine use.</p>
+            <h2>4. External Services & Network Communication</h2>
+            <p>TruShot engages in limited, transparent network communication encrypted in transit using HTTPS/TLS for the following specific purposes:</p>
+            <ul>
+                <li><strong>Amplitude Product Telemetry:</strong> TruShot integrates Amplitude to collect aggregate, pseudonymous telemetry on feature usage (such as pose guides applied and capture actions) and application version. This data is transmitted securely over HTTPS/TLS to Amplitude's standard ingestion endpoint using an SDK-generated random pseudonymous device ID. TruShot does not request location permissions, does not access device location hardware, and does not collect or transmit precise GPS coordinates (<code>locationListening: false</code>). As standard with internet communication, Amplitude's ingestion servers receive the network IP address to route requests and may derive approximate geographic information (such as country, region, or city level) server-side for aggregate regional analytics. No personal identities, advertising IDs, or photos are ever collected.</li>
+                <li><strong>Static Reference Pose Catalog Downloads:</strong> The application downloads public, pre-packaged pose reference images and manifest files from a public read-only Content Delivery Network endpoint (hosted on Cloudflare R2 at <code>pub-d558bfedadc54c7f9a8664cf00a5470f.r2.dev</code>). These operations are strictly inbound HTTP GET downloads; no user photos, camera inputs, filenames, folder names, or personal data are ever uploaded to the CDN.</li>
+                <li><strong>App Update Checks:</strong> TruShot performs a lightweight static JSON check via GitHub over HTTPS/TLS (from <code>raw.githubusercontent.com</code>) to notify you of critical application updates without transmitting user media or personal data.</li>
+            </ul>
         </section>
 
         <section>
-            <h2>5. Children's Privacy</h2>
-            <p>trushot does not target or knowingly collect information from children under 13 years of age (or applicable age in your jurisdiction). Because the app collects no personal data whatsoever, parents can rest assured no identifying data is harvested from their children.</p>
+            <h2>5. Data Retention & Deletion Requests</h2>
+            <p>Analytics events collected by Amplitude are retained in pseudonymous aggregate form associated only with an SDK-generated random UUID. Because TruShot does not require accounts, usernames, email addresses, or logins, the application interface does not maintain user profiles or display internal telemetry identifiers. <strong>Users do not need to obtain or provide an Amplitude Device ID from the TruShot app UI</strong>, as no such identifier is exposed.</p>
+            <p><strong>Local State Reset vs. Server-Side Deletion:</strong> Uninstalling TruShot or clearing application data in Android Settings permanently purges all local app storage and destroys the stored pseudonymous Device ID from your device, preventing future telemetry from linking to that identifier. However, uninstalling the app does not automatically delete historical analytics data already stored on Amplitude's servers. Users who want server-side historical analytics data deleted should use the email deletion process described below.</p>
+            <p><strong>Deletion Request Process:</strong> Users can request deletion of their TruShot analytics data by contacting <a href="mailto:support@trushot.app" style="color: var(--accent);">support@trushot.app</a>. The developer will use information reasonably available from the request and Amplitude's administrative tools (such as User Search) to identify the corresponding Amplitude record. Because telemetry is pseudonymous and not linked to account credentials, not every request can always be uniquely matched automatically. If the available information is insufficient to confidently identify the correct Amplitude record, the developer may request additional technical context from the user before processing the deletion.</p>
+            <p>Once the relevant Amplitude record is identified, the developer submits the deletion request through Amplitude's User Privacy API using the canonical internal Amplitude identifier. Amplitude processes deletion requests according to its documented deletion lifecycle, which may take <strong>up to 30 days</strong> to complete.</p>
         </section>
 
         <section>
-            <h2>6. Policy Updates</h2>
+            <h2>6. Children's Privacy</h2>
+            <p>TruShot does not knowingly collect any identifying personal data from children under 13 years of age (or the applicable age in your jurisdiction). Because the app collects no personal identity data, parents and guardians can trust that no personal information is harvested from their children.</p>
+        </section>
+
+        <section>
+            <h2>7. Policy Updates</h2>
             <p>We may periodically update this Privacy Policy to reflect future software enhancements. Any modifications will be posted to this page with an updated "Effective Date".</p>
         </section>
 
         <section>
-            <h2>7. Contact Us</h2>
-            <p>If you have any questions, feedback, or concerns regarding this Privacy Policy or trushot's privacy architecture, please reach out to us at:</p>
+            <h2>8. Contact & Inquiries</h2>
+            <p>If you have any questions, feedback, or concerns regarding this Privacy Policy or TruShot's privacy architecture, please reach out to us at:</p>
             <p><strong>Email:</strong> <a href="mailto:support@trushot.app" style="color: var(--accent);">support@trushot.app</a></p>
         </section>
 
         <footer>
-            <p>© 2026 trushot Studio. All rights reserved.</p>
+            <p>© 2026 TruShot Studio. All rights reserved.</p>
             <p style="margin-top: 8px;">
                 <a href="privacy-policy.html">Privacy Policy</a> ·
                 <a href="terms.html">Terms & Conditions</a>
